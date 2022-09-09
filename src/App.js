@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
 
-function App() {
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css' // optional
+import 'tippy.js/themes/light.css'
+import 'tippy.js/animations/perspective.css'
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Tippy JS React Tutorial</h1>
+
+      <div className='area'>
+        <Tippy placement={'bottom'} animation='perspective' theme={'light'} interactive={true} content={
+          <Tippy offset={[100, 20]} placement={'bottom'} animation='perspective' theme={'light'} interactive={true} content={<div>
+            <h1>Hello this is my first tooltip using Tippy</h1>
+            <Tippy offset={[200, -100]} placement={'top'} animation='perspective' theme={'light'} interactive={true} content={<div>
+            <h1>ohh! finally you are here</h1>
+            
+          </div>}>
+            <button className='ref-button3'>
+            welcome inside me
+            </button>
+          </Tippy>
+            
+          </div>}>
+            <button className='ref-button2'>
+            let's start
+            </button>
+          </Tippy>
+        }>
+          <button className='ref-button'>
+          Click on me!
+          </button>
+        </Tippy>
+      </div>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

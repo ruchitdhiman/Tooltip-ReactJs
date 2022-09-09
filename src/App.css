@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body{
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #43cea2, #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Cabin', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.app h3{
+  text-shadow: 1px 1px 4px black;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app h3 b{
+  color: rgb(252, 212, 33);
+
+}
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(151, 15, 110);
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-top: 10px solid rgb(151, 15, 110);
+}
+
+.area{
+  padding:100px;
+  background-color: darkviolet;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.ref-button{
+  width: 200px;
+  height:45px;
+  background-color: white;
+  border: 2px dotted #423842;
+}
+
+.ref-button:hover{
+  background-color: deeppink;
+}
+
+.ref-button2{
+  width: 150px;
+  height:45px;
+  background-color:cadetblue;
+  border: 1px dotted #423842;
+  box-shadow: 1px 4px 1px #ccc;
+  margin:4px;
+}
+
+.ref-button3{
+  width: 100px;
+  height:45px;
+  background-color:darkorange;
+  border: 1px dotted #423842;
 }
